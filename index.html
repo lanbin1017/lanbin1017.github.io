@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Swiper demo</title>
@@ -11,59 +11,116 @@
 
     <!-- Demo styles -->
     <style>
-    html, body {
-        position: relative;
-        height: 100%;
-    }
-    body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color:#000;
-        margin: 0;
-        padding: 0;
-    }
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
 
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .swiper-wrapper{
+            width: 100%;
+            height: 100%;
+            /*text-align: center;*/
+        }
+        .swiper-slide {
+           margin: 0 auto;
+        }
     </style>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><h1>第一个个人站</h1></div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
-            <div class="swiper-slide">Slide 10</div>
+            <div class="swiper-slide page1">
+                <div class="individual">
+                    <div class="indi-top">
+                        <img src="img/touxiang.png" alt="">
+                          
+                    </div>
+                    <hr>  
+                    <div class="indi-bottom">
+                       <ul>
+                           <li><p>&nbsp&nbsp邓良斌</p></li>
+                           <li><p>&nbsp&nbsp男</p></li>
+                           <li><p>&nbsp&nbsp24</p></li>
+                           <li><p>&nbsp&nbsp汉族</p></li>
+                           <li><p>&nbsp&nbsp湖南株洲人</p></li>
+                           <li><p>&nbsp&nbsp本科</p></li>
+                           <li><p>&nbsp&nbsp电子信息工程</p></li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide page2">
+               <div class="skill">
+                   <h3>专业技能</h3>
+                   <ul>
+                       <li>HTML</li>
+                       <li>
+                           <ul>
+                               <li>精通DIV+CSS以及弹性盒及响应式布局</li>
+                               <li>深刻理解WEB标准</li>
+                               <li>熟练运用HTML标签</li>
+                               <li>熟练掌握HTML5</li>
+                           </ul>
+                       </li>
+                   </ul>
+                   <ul>
+                       <li>HTML</li>
+                       <li>
+                           <ul>
+                               <li>精通DIV+CSS以及弹性盒及响应式布局</li>
+                               <li>深刻理解WEB标准</li>
+                               <li>熟练运用HTML标签</li>
+                               <li>熟练掌握HTML5</li>
+                           </ul>
+                       </li>
+                   </ul>
+                   <ul>
+                       <li>HTML</li>
+                       <li>
+                           <ul>
+                               <li>精通DIV+CSS以及弹性盒及响应式布局</li>
+                               <li>深刻理解WEB标准</li>
+                               <li>熟练运用HTML标签</li>
+                               <li>熟练掌握HTML5</li>
+                           </ul>
+                       </li>
+                   </ul>
+                   <ul>
+                       <li>HTML</li>
+                       <li>
+                           <ul>
+                               <li>精通DIV+CSS以及弹性盒及响应式布局</li>
+                               <li>深刻理解WEB标准</li>
+                               <li>熟练运用HTML标签</li>
+                               <li>熟练掌握HTML5</li>
+                           </ul>
+                       </li>
+                   </ul>
+               </div>
+            </div>
+            <div class="swiper-slide page3">Slide 3</div>
+            <div class="swiper-slide page4">Slide 4</div>
+            <div class="swiper-slide page5">Slide 5</div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -71,18 +128,19 @@
 
     <!-- Swiper JS -->
     <script src="js/swiper.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        direction: 'vertical',
-        slidesPerView: 1,
-        paginationClickable: true,
-        spaceBetween: 30,
-        mousewheelControl: true
-    });
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            direction: 'vertical',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 30,
+            mousewheelControl: true
+        });
     </script>
 </body>
+
 </html>
-    
